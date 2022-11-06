@@ -1,0 +1,19 @@
+.row{
+    margin:0;
+}
+.card{
+    margin-top:120px;
+    background-color:#121212 ;
+    color:white;
+    border:none;
+    padding-left: 30px;   
+}
+.btn-orange{
+    background-color: #FF5D17;
+}
+.font-orange{
+    color: #FF5D17;
+}
+a{
+    text-decoration: none;
+}

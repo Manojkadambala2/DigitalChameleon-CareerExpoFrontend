@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between align-items-center mb-3 upper-box">
+    <h1 class="pt-5 font-orange">Jobs</h1>
+    <button mat-raised-button class="btn-orange apply-btn mt-5" *ngIf="isCandidate" (click)="getAppliedJobs($event)">Applied Jobs</button>
+    <button mat-raised-button class="btn-orange apply-btn mt-5" *ngIf="!isCandidate" routerLink="/recruiterprofile/addJobs">Add Jobs</button>
+</div>
+<form class="d-flex" (ngSubmit)="searchJobs()">
+    <input class="form-control mr-sm-2 mr-2" type="search" placeholder="Search jobs on basis of skills" aria-label="Search" [(ngModel)]="search" (value)="search" name="search">
+    <button mat-raised-button class="btn-orange my-2 my-sm-0" type="submit">Search</button>
+</form>
+<ng-container>
+    <div class="row">
+            <div class="card" *ngFor="let item of jobs">
+                <div class="card-body d-flex align-items-end">
+                    <div class="col-lg-10 desc">
+                        <h2 class="card-title">{{item.jobRole}}</h2>
+                        <p>Exp : {{item.experience}} years</p>
+                        <p>Skills : {{item.skills}} </p>
+                        <p>Location : {{item.location}} </p>
+                    </div>
+                    <div class="col-lg-2">
+                        <button mat-raised-button class="btn-orange my-2 my-sm-0" type="button" (click)="jobDetails($event, item.id)">View Details</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</ng-container>
+
+

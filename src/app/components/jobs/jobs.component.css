@@ -1,0 +1,32 @@
+form{
+    width:95%;
+    display :inline;
+    margin-bottom: 30px;
+}
+.upper-box{
+    width:95%;
+}
+.apply-btn{
+    height:40px;
+}
+h1{
+    font-weight: 100;
+}
+input{
+    margin-right:10px;
+}
+input:focus{
+    outline:none;
+}
+.card{
+    width:95%;
+    margin:10px 10px;
+    background-color:#292929;
+    color:white;
+}
+
+@media (max-width: 720px) {
+    .desc{
+        width:80%;
+    }
+  }
