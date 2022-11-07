@@ -37,6 +37,7 @@ export class JobDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.jobService.getSelectedJob();
+    console.log(this.id);
     this.jobService.getJobDetails(this.id).subscribe(
       response => {
         this.job = response;
@@ -47,7 +48,7 @@ export class JobDetailsComponent implements OnInit {
         this.isApplied = response;
       },
       error=>{
-        console.log(error.statusText);
+        console.log("Glitch");
       }
     )
   }

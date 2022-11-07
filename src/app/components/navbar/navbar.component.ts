@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit {
   constructor(private authService:AuthService, private router :Router) { }
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authService.isLoggedIn();
+    setInterval(() => {
+      this.isLoggedIn = this.authService.isLoggedIn(); 
+    },200);
   }
 
   logout(event:any){
@@ -20,6 +22,8 @@ export class NavbarComponent implements OnInit {
     localStorage.removeItem('user');
     localStorage.removeItem('role');
     this.router.navigateByUrl('');
+  }
+  ngOnDestroy() {
   }
 
 }

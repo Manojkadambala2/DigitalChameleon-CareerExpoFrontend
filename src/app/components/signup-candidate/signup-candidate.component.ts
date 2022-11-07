@@ -53,7 +53,7 @@ export class SignupCandidateComponent implements OnInit {
         console.log(this.skills.value);
         this.router.navigateByUrl('');
     },error => {
-      alert(error.statusText);
+      alert("Sorry sign-up not successful");
     }); 
   }
 

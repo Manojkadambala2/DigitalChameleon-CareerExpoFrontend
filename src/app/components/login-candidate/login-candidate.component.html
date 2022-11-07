@@ -3,12 +3,12 @@
     <form (ngSubmit)="loginCandidate()">
         <div class="form-group">
           <label>Username</label>
-          <input matInput type="text" class="form-control" placeholder="Enter username"  [formControl]="username" name="username">
+          <input matInput type="text" class="form-control" placeholder="Enter username"  [formControl]="username" name="username" ng-required>
           <mat-error *ngIf="username.invalid">{{getUsernameErrorMessage()}}</mat-error>
         </div>
         <div class="form-group mt-4">
           <label>Password</label>
-          <input type="password" class="form-control" matInput placeholder="Password" [formControl]="password" name="password">
+          <input type="password" class="form-control" matInput placeholder="Password" [formControl]="password" name="password" ng-required>
           <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
         </div>
         <button type="submit" mat-raised-button class="btn-orange mt-5">Login</button>

@@ -3,11 +3,11 @@
     <div class="card-body">
             <h2 class="card-title">{{job.jobRole}}</h2>
             <p>Company : {{job.company}}</p>
-            <p>Exp : {{job.experience}}</p>
+            <p>Exp : {{job.experience}} years</p>
             <p>Skills : {{job.skills}}</p>
             <p>Location : {{job.location}} </p>
-            <p>Salary : {{job.salary}} </p> 
-            <p class="mb-5">Description : Job Available</p>
+            <p>Salary : {{job.salary | currency:"INR":"symbol"}} </p> 
+            <p class="mb-5">Description : {{job.description}}</p>
             <button mat-raised-button class="btn-orange my-2 my-sm-0" type="submit" *ngIf="!isApplied;" (click)="applyJobs($event, job.id)">Apply</button>
             <button mat-raised-button class="btn-dark my-2 my-sm-0 font-orange" type="submit" *ngIf="isApplied">Applied</button>
     </div>

@@ -49,7 +49,7 @@ export class SignupRecruiterComponent implements OnInit {
       alert("SignUp Successful");
       this.router.navigateByUrl('');
     },error => {
-      alert(error.statusText);}
+      alert("Sorry sign-up not successful");}
     );
   }
 

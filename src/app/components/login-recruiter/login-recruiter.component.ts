@@ -33,7 +33,7 @@ export class LoginRecruiterComponent implements OnInit {
          localStorage.setItem('token', response.authToken);
          localStorage.setItem('role','recruiter');
          this.router.navigateByUrl('/recruiterprofile/jobs')
-      },error => {alert(error.statusText);}
+      },error => {alert("Authorization Failed!!");}
       
     )
   }

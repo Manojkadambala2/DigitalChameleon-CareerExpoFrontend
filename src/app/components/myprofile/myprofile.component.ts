@@ -30,6 +30,7 @@ export class MyprofileComponent implements OnInit {
    this.name = this.user.name;
    this.email = this.user.email;
    this.phone = this.user.phone;
+   this.skills = this.user.skills;
   }
 
 }

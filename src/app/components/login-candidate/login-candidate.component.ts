@@ -38,7 +38,7 @@ export class LoginCandidateComponent implements OnInit {
         localStorage.setItem('token', response.authToken);
         localStorage.setItem('role','candidate');
         this.router.navigateByUrl('/candidateprofile/jobs');
-      },error => {alert(error.statusText);}
+      },error => {alert("Authorization Failed!!");}
     );
   }
 

@@ -7,22 +7,22 @@
             <div class="card-body">
                 <form (ngSubmit)="updateProfile()">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Name</label>
+                        <label>Name</label>
                         <input matInput type="text" class="form-control" [(ngModel)]="name" (value)="name" name="name">
                         <!-- <mat-error *ngIf="emailId.invalid">{{getErrorMessage()}}</mat-error> -->
                       </div> 
                       <div class="form-group pt-3">
-                        <label for="exampleInputEmail1">Email</label>
+                        <label>Email</label>
                         <input matInput type="text" class="form-control" [(ngModel)]="email" (value)="email" name="email">
                         <!-- <mat-error *ngIf="emailId.invalid">{{getErrorMessage()}}</mat-error> -->
                       </div> 
                       <div class="form-group pt-3">
-                        <label for="exampleInputEmail1">Phone</label>
-                        <input matInput type="text" class="form-control" [(ngModel)]="phone" (value)="phone" name="phone">
+                        <label>Phone</label>
+                        <input matInput type="text" class="form-control" [(ngModel)]="phone" (value)="phone" name="phone" ng-maxlength="10">
                         <!-- <mat-error *ngIf="emailId.invalid">{{getErrorMessage()}}</mat-error> -->
                       </div>
                       <div class="form-group pt-3">
-                        <label for="exampleInputEmail1">Skills</label>
+                        <label>Skills</label>
                         <input matInput type="text" class="form-control" [(ngModel)]="skills" (value)="skills" name="skills">
                         <!-- <mat-error *ngIf="emailId.invalid">{{getErrorMessage()}}</mat-error> -->
                       </div> 

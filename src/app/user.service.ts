@@ -30,11 +30,11 @@ export class UserService {
 
   public updateRecruiter(name:any, email:any, phone:any): Observable<any> {
     const url = 'http://localhost:8080/api/users';
-    return this.http.post<RecruiterInfo>(url, {name, email, phone},this.httpOptions);
+    return this.http.put<RecruiterInfo>(url, {name, email, phone},this.httpOptions);
   }
 
   public updateCandidate(name:any, email:any, phone:any, skills:any): Observable<any> {
     const url = 'http://localhost:8080/api/users';
-    return this.http.post<CandidateInfo>(url, {name, email, phone, skills},this.httpOptions);
+    return this.http.put<CandidateInfo>(url, {name, email, phone, skills},this.httpOptions);
   }
 }

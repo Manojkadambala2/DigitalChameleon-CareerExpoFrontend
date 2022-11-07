@@ -25,14 +25,18 @@ export class JobsComponent implements OnInit {
 
   jobDetails(event:any,id:any){
     this.jobService.setSelectedJob(id);
-    this.router.navigateByUrl('/candidateprofile/jobdetails');
+    if(localStorage.getItem('role') === 'candidate'){
+      this.router.navigateByUrl('/candidateprofile/jobdetails');
+    }else{
+      this.router.navigateByUrl('/recruiterprofile/jobdetails');
+    }
   }
 
   getAppliedJobs(event:any){
     this.jobService.getAppliedJobs().subscribe(
       response => {
-        if(response.jobs.length>0){
-          this.jobs = response.jobs
+        if(response.applications.length>0){
+          this.jobs = response.applications;
         }else{
           alert("Sorry! you didn't applied to any job yet");
         }
